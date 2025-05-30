@@ -4,6 +4,8 @@ import './App.css';
 import TestNumContext from './Context/TestNumContext';
 import Home from './views/Home/Home';
 import Test from './views/Test/Test';
+import StateTest from './views/StateTest/StateTest';
+import RefTest from './views/RefTest/RefTest';
 
 function GNB() {
     return (
@@ -11,6 +13,10 @@ function GNB() {
             <Link to='/'>홈</Link>
             <span> | </span>
             <Link to='/test'>테스트</Link>
+            <span> | </span>
+            <Link to='/ref'>Ref</Link>
+            <span> | </span>
+            <Link to='/state'>State</Link>
         </nav>
     );
 }
@@ -25,6 +31,8 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/test' element={<Test />} />
+                    <Route path='/ref' element={<RefTest />} />
+                    <Route path='/state' element={<StateTest />} />
                 </Routes>
             </BrowserRouter>
         </TestNumContext.Provider>
