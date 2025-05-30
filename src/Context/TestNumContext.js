@@ -1,7 +1,4 @@
 import { createContext } from 'react';
 
-const TestNumContext = createContext({
-  testNum: 0,
-  setTestNum: () => {},
-});
+const TestNumContext = createContext();
 export default TestNumContext;

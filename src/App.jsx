@@ -1,18 +1,30 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import TestNumContext from './Context/TestNumContext';
-// import Home from './views/Home/Home';
-// import Test from './views/Test/Test';
+import Home from './views/Home/Home';
+import Test from './views/Test/Test';
+
+function GNB() {
+    return (
+        <nav>
+            <Link to='/'>홈</Link>
+            <span> | </span>
+            <Link to='/test'>테스트</Link>
+        </nav>
+    );
+}
 
 function App() {
-    const [testNum, setTestNum] = useState(0);
+    const [globalVal, setGlobalVal] = useState(0);
     return (
-        <TestNumContext.Provider value={{ testNum, setTestNum }}>
+        //함수도 같이 전달
+        <TestNumContext.Provider value={{ globalVal, setGlobalVal }}>
             <BrowserRouter>
+                <GNB />
                 <Routes>
-                    {/* <Route path='/' element={<Home />} /> */}
-                    {/* <Route path='/test' element={<Test />} /> */}
+                    <Route path='/' element={<Home />} />
+                    <Route path='/test' element={<Test />} />
                 </Routes>
             </BrowserRouter>
         </TestNumContext.Provider>

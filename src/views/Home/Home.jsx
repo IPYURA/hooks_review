@@ -1,14 +1,18 @@
-// import { useState, useContext } from 'react';
-// import TestNumContext from '../../Context/TestNumContext';
+import { useState, useContext } from 'react';
+import TestNumContext from '../../Context/TestNumContext';
 
-// const Home = () => {
-//     const context = useContext(TestNumContext);
-//     return (
-//         <>
-//             <div>Home</div>
-//             <h1>{testNum}</h1>
-//             <button onClick={setTestNum((prev) => prev + 1)}></button>
-//         </>
-//     );
-// };
-// export default Home;
+const Home = () => {
+    const { globalVal, setGlobalVal } = useContext(TestNumContext);
+
+    const handleClick = () => {
+        setGlobalVal(globalVal + 1);
+    };
+    return (
+        <>
+            <div>Home</div>
+            <h1>{globalVal}</h1>
+            <button onClick={handleClick}>UP</button>
+        </>
+    );
+};
+export default Home;
