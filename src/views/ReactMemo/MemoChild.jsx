@@ -1,11 +1,11 @@
 import { memo } from "react";
 const MemoChild = () => {
-  console.log("MemoChild Rendered!");
-  return (
-    <div>
-      <h3>Memo Child Component</h3>
-    </div>
-  );
+    console.log("MemoChild Rendered!");
+    return (
+        <div>
+            <h3>Memo Child Component</h3>
+        </div>
+    );
 };
 
 export default memo(MemoChild);
@@ -13,6 +13,7 @@ export default memo(MemoChild);
 /*
 
 React.memo 는 컴포넌트를 메모이제이션(캐싱)한다.
+React.memo 는 기본적으로 props가 없으면 리렌더링을 막는다.
 
 MemoChild 컴포넌트에서 memo를 사용하지 않았다면, 부모컴포넌트(ReactMemo.jsx)에서 카운트를 증가시킬 때 
 
