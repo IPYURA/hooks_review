@@ -6,6 +6,7 @@ import Home from './views/Home/Home';
 import Test from './views/Test/Test';
 import StateTest from './views/StateTest/StateTest';
 import RefTest from './views/RefTest/RefTest';
+import ReactMemo from './views/ReactMemo/ReactMemo';
 
 function GNB() {
     return (
@@ -17,6 +18,8 @@ function GNB() {
             <Link to='/ref'>Ref</Link>
             <span> | </span>
             <Link to='/state'>State</Link>
+            <span> | </span>
+            <Link to='/reactmemo'>ReactMemo</Link>
         </nav>
     );
 }
@@ -33,6 +36,7 @@ function App() {
                     <Route path='/test' element={<Test />} />
                     <Route path='/ref' element={<RefTest />} />
                     <Route path='/state' element={<StateTest />} />
+                    <Route path='/reactmemo' element={<ReactMemo />} />
                 </Routes>
             </BrowserRouter>
         </TestNumContext.Provider>
