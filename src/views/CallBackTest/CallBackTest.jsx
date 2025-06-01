@@ -1,14 +1,21 @@
-import React from 'react'
+import { useState, useCallback } from "react";
 
 const CallBackTest = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+    const [callBackVal, setCallBackVal] = useState(0);
+    const callbackTest = useCallback(() => {
+        setCallBackVal(() => callBackVal + 1);
+    }, [callBackVal]);
 
-export default CallBackTest
+    return (
+        <div>
+            <h1>CallBackTest</h1>
+            <strong>{callBackVal}</strong>
+            <button onClick={callbackTest}>callBack으로 카운트업</button>
+        </div>
+    );
+};
+
+export default CallBackTest;
 
 /*
 useCallBack은 함수를 메모이제이션(기억)해서, 의존성 배열에 있는 값이 변하지 않는 한 같은 함수를 계속 반환한다.
