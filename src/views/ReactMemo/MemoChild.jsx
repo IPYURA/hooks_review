@@ -1,11 +1,11 @@
-import { memo } from "react";
+import { memo } from 'react';
 const MemoChild = () => {
-    console.log("MemoChild Rendered!");
-    return (
-        <div>
-            <h3>Memo Child Component</h3>
-        </div>
-    );
+  console.log('MemoChild Rendered!');
+  return (
+    <div>
+      <h3>Memo Child Component</h3>
+    </div>
+  );
 };
 
 export default memo(MemoChild);

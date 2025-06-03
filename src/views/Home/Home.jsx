@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import TestNumContext from '../../Context/TestNumContext';
 
 const Home = () => {

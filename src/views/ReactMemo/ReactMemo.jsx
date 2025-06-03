@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import MemoChild from './MemoChild';
 
 const ReactMemo = () => {
-    const [parentState, setParentState] = useState(0);
+  const [parentState, setParentState] = useState(0);
 
   return (
     <div>
@@ -11,10 +11,10 @@ const ReactMemo = () => {
       <strong>{parentState}</strong>
       <button onClick={() => setParentState(state => state + 1)}> ParnetState++ </button>
       <div>
-        <MemoChild/>
+        <MemoChild />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ReactMemo
+export default ReactMemo;

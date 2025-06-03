@@ -1,18 +1,18 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback } from 'react';
 
 const CallBackTest = () => {
-    const [callBackVal, setCallBackVal] = useState(0);
-    const callbackTest = useCallback(() => {
-        setCallBackVal(() => callBackVal + 1);
-    }, [callBackVal]);
+  const [callBackVal, setCallBackVal] = useState(0);
+  const callbackTest = useCallback(() => {
+    setCallBackVal(() => callBackVal + 1);
+  }, [callBackVal]);
 
-    return (
-        <div>
-            <h1>CallBackTest</h1>
-            <strong>{callBackVal}</strong>
-            <button onClick={callbackTest}>callBack으로 카운트업</button>
-        </div>
-    );
+  return (
+    <div>
+      <h1>CallBackTest</h1>
+      <strong>{callBackVal}</strong>
+      <button onClick={callbackTest}>callBack으로 카운트업</button>
+    </div>
+  );
 };
 
 export default CallBackTest;
