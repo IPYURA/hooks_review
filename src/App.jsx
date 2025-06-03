@@ -8,6 +8,8 @@ import StateTest from './views/StateTest/StateTest';
 import RefTest from './views/RefTest/RefTest';
 import ReactMemo from './views/ReactMemo/ReactMemo';
 import CallBackTest from './views/CallBackTest/CallBackTest';
+import Login from './views/Account/Login';
+import Signup from './views/Account/Signup';
 
 function GNB() {
     return (
@@ -23,6 +25,10 @@ function GNB() {
             <Link to='/reactmemo'>ReactMemo</Link>
             <span> | </span>
             <Link to='/callback'>Callback</Link>
+            <span> | </span>
+            <Link to='/login'>Login</Link>
+            <span> | </span>
+            <Link to='/signup'>SignUp</Link>
         </nav>
     );
 }
@@ -41,6 +47,8 @@ function App() {
                     <Route path='/state' element={<StateTest />} />
                     <Route path='/reactmemo' element={<ReactMemo />} />
                     <Route path='/callback' element={<CallBackTest />} />
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/signup' element={<Signup />} />
                 </Routes>
             </BrowserRouter>
         </TestNumContext.Provider>
