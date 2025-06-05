@@ -11,6 +11,7 @@ const Home = () => {
         <>
             <div>Home</div>
             <h1>{globalVal}</h1>
+            
             <button onClick={handleClick}>UP</button>
             <ul>
                 <li><mark>useContext</mark></li>
