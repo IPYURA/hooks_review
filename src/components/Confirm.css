@@ -14,6 +14,7 @@
   background: #fff;
   width: 320px;
   padding: 24px;
+  border-radius: 4px;
 }
 .modal-exit {
   all: unset;
@@ -26,12 +27,17 @@
   position: absolute;
   top: 0;
   right: 0;
+  color:#191919;
 }
 .modal-text {
   padding: 8px 0;
+  color:#191919;
 }
 .modal-button-wrap {
+    margin-top: 12px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 8px;
 }
 .modal-button-wrap button {
@@ -45,4 +51,8 @@
   border-radius: 4px;
   background: dodgerblue;
   color: #fff;
+  transition: 0.3s;
+}
+.modal-button-wrap button:hover{
+background: #4f7bd9
 }

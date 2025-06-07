@@ -4,6 +4,7 @@ import './Confirm.css';
 const Confirm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const onClickModalClose = () => {
+    console.log('modal closed');
     setIsOpen(isOpen => (isOpen = false));
   };
   return (

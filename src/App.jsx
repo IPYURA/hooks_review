@@ -10,6 +10,7 @@ import ReactMemo from './views/ReactMemo/ReactMemo';
 import CallBackTest from './views/CallBackTest/CallBackTest';
 import Login from './views/Account/Login';
 import Signup from './views/Account/Signup';
+import UiTest from './views/UiTest/UiTest';
 
 function GNB() {
   return (
@@ -29,6 +30,8 @@ function GNB() {
       <Link to="/login">Login</Link>
       <span> | </span>
       <Link to="/signup">SignUp</Link>
+      <span> | </span>
+      <Link to="/uitest">UI Test</Link>
     </nav>
   );
 }
@@ -49,6 +52,7 @@ function App() {
           <Route path="/callback" element={<CallBackTest />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/uitest" element={<UiTest />} />
         </Routes>
       </BrowserRouter>
     </TestNumContext.Provider>
